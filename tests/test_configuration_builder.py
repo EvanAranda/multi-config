@@ -12,4 +12,3 @@ class TestConfigurationBuilder(unittest.TestCase):
             .build()
 
         assert config.keyA == 1
-        assert config["key2.key2_1"] == "value2.1"
