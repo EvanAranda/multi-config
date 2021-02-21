@@ -9,7 +9,6 @@ class TestConfigurationBuilder(unittest.TestCase):
     def test_build(self):
         config = ConfigurationBuilder() \
             .add(MemoryConfigurationSource(dict(keyA=1))) \
-            .add(JsonConfigurationSource('./tests/data/example-config.json')) \
             .build()
 
         assert config.keyA == 1
