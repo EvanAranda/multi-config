@@ -12,8 +12,8 @@ class ConfigurationBuilder:
     def __init__(self):
         self._sources: Set[IConfigurationSource] = set()
 
-    def add(self, source: IConfigurationSource) -> 'ConfigurationBuilder':
-        self._sources.add(source)
+    def add(self, *sources: IConfigurationSource) -> 'ConfigurationBuilder':
+        self._sources.update(sources)
         return self
 
     def build(self) -> Configuration:

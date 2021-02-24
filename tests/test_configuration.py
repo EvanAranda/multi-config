@@ -26,5 +26,5 @@ class TestConfiguration(unittest.TestCase):
 
         assert config["key1"] == "value1"
         assert isinstance(config["key2"], Section)
-        assert config["key2.key2_2"] == "value2_2"
+        assert config["key2:key2_2"] == "value2_2"
         assert config["key2"]["key2_2"] == "value2_2"

@@ -9,8 +9,8 @@ class Section:
 
     def __getitem__(self, key: str):
         try:
-            if '.' in key:
-                pathSegments = key.split(".")
+            if ':' in key:
+                pathSegments = key.split(':')
                 value = self._dict[pathSegments[0]]
                 for pathSegment in pathSegments[1:]:
                     value = value[pathSegment]
